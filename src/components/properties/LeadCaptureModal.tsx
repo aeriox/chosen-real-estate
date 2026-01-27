@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Bell, CheckCircle, Loader2, X } from "lucide-react";
+import { Bell, CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -12,7 +12,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 import type { SearchFilters } from "./SearchFilters";
 
 interface LeadCaptureModalProps {
@@ -60,16 +59,13 @@ export function LeadCaptureModal({ searchCriteria }: LeadCaptureModalProps) {
     setIsSubmitting(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke("save-lead-search", {
-        body: {
-          fullName: formData.fullName.trim(),
-          phoneNumber: formData.phoneNumber.trim() || null,
-          email: formData.email.trim().toLowerCase(),
-          searchCriteria,
-        },
+      // TODO: Connect to backend when Lovable Cloud is enabled
+      console.log("Lead submission:", {
+        fullName: formData.fullName.trim(),
+        phoneNumber: formData.phoneNumber.trim() || null,
+        email: formData.email.trim().toLowerCase(),
+        searchCriteria,
       });
-
-      if (error) throw error;
 
       setIsSuccess(true);
       toast({

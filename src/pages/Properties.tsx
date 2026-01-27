@@ -1,12 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Home, Building2, ArrowRight } from "lucide-react";
+import { Home, Building2 } from "lucide-react";
 import { SearchFiltersBar, SearchFilters } from "@/components/properties/SearchFilters";
 import { ListingsGrid } from "@/components/properties/ListingsGrid";
 import { LeadCaptureModal } from "@/components/properties/LeadCaptureModal";
-import { supabase } from "@/integrations/supabase/client";
 import heroImage from "@/assets/hero-home.jpg";
 
 interface Property {
@@ -61,26 +60,11 @@ const Properties = () => {
     setHasSearched(true);
 
     try {
-      const { data, error: fetchError } = await supabase.functions.invoke("fetch-listings", {
-        body: {
-          city: filters.city,
-          minPrice: filters.minPrice,
-          maxPrice: filters.maxPrice,
-          bedrooms: filters.bedrooms,
-          bathrooms: filters.bathrooms,
-          propertyType: filters.propertyType,
-          limit: 24,
-        },
-      });
-
-      if (fetchError) throw fetchError;
-
-      if (data?.error) {
-        setError(data.error);
-        setListings([]);
-      } else {
-        setListings(data?.listings || []);
-      }
+      // TODO: Connect to backend when Lovable Cloud is enabled
+      console.log("Fetching listings with filters:", filters);
+      
+      // Mock empty response for now
+      setListings([]);
     } catch (err) {
       console.error("Error fetching listings:", err);
       const specific = extractFunctionErrorMessage(err);
