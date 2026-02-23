@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { X, Phone, Mail, Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logoImage from "@/assets/logo-chosen.png";
+import logoImage from "@/assets/chosen-logo.png";
 
 const navigation = [
   { name: "Home", href: "/" },
