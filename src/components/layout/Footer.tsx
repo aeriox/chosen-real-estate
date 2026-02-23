@@ -23,31 +23,29 @@ const footerLinks = {
 export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
-      {/* Main Footer */}
       <div className="container-custom py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-          {/* Brand Column */}
+          {/* Brand */}
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block">
-              <span className="font-serif text-2xl tracking-wide-custom uppercase">
+              <span className="font-serif text-2xl">
                 Chosen Real Estate Advisors
               </span>
             </Link>
-            <p className="mt-4 text-sm italic text-champagne">
+            <p className="mt-3 text-sm italic text-accent">
               "Faith. Excellence. Legacy."
             </p>
             <p className="mt-6 text-primary-foreground/60 text-sm leading-relaxed max-w-sm">
-              A faith-driven real estate brokerage serving Palm Beach & Orlando with integrity, 
+              A faith-driven real estate brokerage serving Palm Beach & Orlando with integrity,
               expertise, and purpose.
             </p>
-            
-            {/* Contact Info */}
+
             <div className="mt-8 space-y-3">
-              <a href="tel:+15612472797" className="flex items-center gap-3 text-sm text-primary-foreground/60 hover:text-champagne transition-colors">
+              <a href="tel:+15612472797" className="flex items-center gap-3 text-sm text-primary-foreground/60 hover:text-accent transition-colors">
                 <Phone className="w-4 h-4" />
                 (561) 247-2797
               </a>
-              <a href="mailto:realestate@chosenre.com" className="flex items-center gap-3 text-sm text-primary-foreground/60 hover:text-champagne transition-colors">
+              <a href="mailto:realestate@chosenre.com" className="flex items-center gap-3 text-sm text-primary-foreground/60 hover:text-accent transition-colors">
                 <Mail className="w-4 h-4" />
                 realestate@chosenre.com
               </a>
@@ -56,12 +54,11 @@ export function Footer() {
                 Palm Beach & Orlando, FL
               </p>
             </div>
-            
-            {/* Social Links */}
+
             <div className="flex gap-4 mt-8">
               <a
                 href="https://www.facebook.com/chosenre"
-                className="p-3 border border-primary-foreground/20 hover:border-champagne hover:text-champagne transition-all duration-300"
+                className="p-3 rounded-lg border border-primary-foreground/20 hover:border-accent hover:text-accent transition-all duration-300"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
@@ -69,16 +66,13 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Properties Links */}
+          {/* Properties */}
           <div>
-            <h4 className="text-xs tracking-ultra uppercase text-champagne mb-6">Properties</h4>
+            <h4 className="text-xs font-sans font-semibold tracking-ultra uppercase text-accent mb-6">Properties</h4>
             <ul className="space-y-4">
               {footerLinks.properties.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-sm text-primary-foreground/60 hover:text-champagne transition-colors"
-                  >
+                  <Link to={link.href} className="text-sm text-primary-foreground/60 hover:text-accent transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -86,16 +80,13 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Services Links */}
+          {/* Services */}
           <div>
-            <h4 className="text-xs tracking-ultra uppercase text-champagne mb-6">Services</h4>
+            <h4 className="text-xs font-sans font-semibold tracking-ultra uppercase text-accent mb-6">Services</h4>
             <ul className="space-y-4">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-sm text-primary-foreground/60 hover:text-champagne transition-colors"
-                  >
+                  <Link to={link.href} className="text-sm text-primary-foreground/60 hover:text-accent transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -103,16 +94,13 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Company Links */}
+          {/* Company */}
           <div>
-            <h4 className="text-xs tracking-ultra uppercase text-champagne mb-6">Company</h4>
+            <h4 className="text-xs font-sans font-semibold tracking-ultra uppercase text-accent mb-6">Company</h4>
             <ul className="space-y-4">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="text-sm text-primary-foreground/60 hover:text-champagne transition-colors"
-                  >
+                  <Link to={link.href} className="text-sm text-primary-foreground/60 hover:text-accent transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -120,7 +108,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/faith-community"
-                  className="inline-flex items-center gap-2 text-sm text-champagne hover:text-champagne-light transition-colors"
+                  className="inline-flex items-center gap-2 text-sm text-accent hover:text-terra-light transition-colors"
                 >
                   <Heart className="w-4 h-4" />
                   Request Prayer
@@ -131,7 +119,6 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-primary-foreground/10">
         <div className="container-custom py-8 flex flex-col gap-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
@@ -147,7 +134,6 @@ export function Footer() {
               </Link>
             </div>
           </div>
-          {/* Stellar MLS Disclosure */}
           <p className="text-[10px] text-primary-foreground/30 text-center leading-relaxed max-w-4xl mx-auto">
             Based on information from the Stellar Multiple Listing Service. This information may or may not include all listed expired, withdrawn, pending, or sold properties of one or more members of the Stellar Multiple Listing Service.
           </p>
