@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Search } from "lucide-react";
-import heroImage from "@/assets/hero-living-room.jpg";
+import heroImage from "@/assets/hero-living-room-new.jpg";
 
 export const Hero = () => {
   return (
@@ -12,7 +12,7 @@ export const Hero = () => {
           alt="Luxury modern living room"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/40 to-navy/80" />
       </div>
 
       {/* Content */}
@@ -21,7 +21,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="inline-block text-primary tracking-[0.3em] text-xs md:text-sm mb-6"
+          className="inline-block text-gold tracking-[0.3em] text-xs md:text-sm mb-6"
         >
           PALM BEACH & ORLANDO
         </motion.span>
@@ -30,7 +30,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-serif text-4xl md:text-6xl lg:text-7xl text-foreground mb-4"
+          className="font-serif text-4xl md:text-6xl lg:text-7xl text-cream mb-4"
         >
           Chosen for Excellence.
         </motion.h1>
@@ -39,7 +39,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="font-serif italic text-3xl md:text-5xl lg:text-6xl text-primary mb-8"
+          className="font-serif italic text-3xl md:text-5xl lg:text-6xl text-gold mb-8"
         >
           Called to Serve.
         </motion.p>
@@ -48,7 +48,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-foreground/80 text-lg md:text-xl tracking-wide mb-12"
+          className="text-cream/80 text-lg md:text-xl tracking-wide mb-12"
         >
           Faith-driven integrity. World-class expertise.
         </motion.p>
@@ -64,10 +64,10 @@ export const Hero = () => {
             <input
               type="text"
               placeholder="Search by City, Lifestyle, or Zip..."
-              className="w-full bg-foreground/10 backdrop-blur-md border border-foreground/20 rounded-full py-4 pl-6 pr-14 text-foreground placeholder:text-foreground/50 focus:outline-none focus:border-primary/50 transition-colors"
+              className="w-full bg-cream/10 backdrop-blur-md border border-cream/20 rounded-full py-4 pl-6 pr-14 text-cream placeholder:text-cream/50 focus:outline-none focus:border-gold/50 transition-colors"
             />
-            <button className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-primary/90 transition-colors">
-              <Search className="w-5 h-5 text-primary-foreground" />
+            <button className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-gold rounded-full flex items-center justify-center hover:bg-gold-dark transition-colors">
+              <Search className="w-5 h-5 text-accent-foreground" />
             </button>
           </div>
         </motion.div>
@@ -81,13 +81,13 @@ export const Hero = () => {
         >
           <a
             href="#properties"
-            className="text-sm tracking-[0.2em] text-foreground border-b border-foreground/30 pb-1 hover:text-primary hover:border-primary transition-colors"
+            className="text-sm tracking-[0.2em] text-cream border-b border-cream/30 pb-1 hover:text-gold hover:border-gold transition-colors"
           >
             RESIDENTIAL
           </a>
           <a
             href="#properties"
-            className="text-sm tracking-[0.2em] text-foreground border-b border-foreground/30 pb-1 hover:text-primary hover:border-primary transition-colors"
+            className="text-sm tracking-[0.2em] text-cream border-b border-cream/30 pb-1 hover:text-gold hover:border-gold transition-colors"
           >
             COMMERCIAL
           </a>
@@ -101,11 +101,11 @@ export const Hero = () => {
         transition={{ duration: 1, delay: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
-        <div className="w-6 h-10 border border-foreground/30 rounded-full flex justify-center">
+        <div className="w-6 h-10 border border-cream/30 rounded-full flex justify-center">
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            className="w-1.5 h-1.5 bg-primary rounded-full mt-2"
+            className="w-1.5 h-1.5 bg-gold rounded-full mt-2"
           />
         </div>
       </motion.div>

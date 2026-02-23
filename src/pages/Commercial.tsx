@@ -5,7 +5,7 @@ import {
   Building2, Users, TrendingUp, FileText, Lock, 
   HardHat, MapPin, RefreshCw, ArrowRight, CheckCircle 
 } from "lucide-react";
-import commercialHero from "@/assets/commercial-hero.jpg";
+import commercialHero from "@/assets/commercial-hero-new.jpg";
 
 const services = [
   {

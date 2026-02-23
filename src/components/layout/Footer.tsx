@@ -32,7 +32,7 @@ export function Footer() {
                 Chosen Real Estate Advisors
               </span>
             </Link>
-            <p className="mt-3 text-sm italic text-accent">
+            <p className="mt-3 text-sm italic text-gold">
               "Faith. Excellence. Legacy."
             </p>
             <p className="mt-6 text-primary-foreground/60 text-sm leading-relaxed max-w-sm">
@@ -41,11 +41,11 @@ export function Footer() {
             </p>
 
             <div className="mt-8 space-y-3">
-              <a href="tel:+15612472797" className="flex items-center gap-3 text-sm text-primary-foreground/60 hover:text-accent transition-colors">
+              <a href="tel:+15612472797" className="flex items-center gap-3 text-sm text-primary-foreground/60 hover:text-gold transition-colors">
                 <Phone className="w-4 h-4" />
                 (561) 247-2797
               </a>
-              <a href="mailto:realestate@chosenre.com" className="flex items-center gap-3 text-sm text-primary-foreground/60 hover:text-accent transition-colors">
+              <a href="mailto:realestate@chosenre.com" className="flex items-center gap-3 text-sm text-primary-foreground/60 hover:text-gold transition-colors">
                 <Mail className="w-4 h-4" />
                 realestate@chosenre.com
               </a>
@@ -58,7 +58,7 @@ export function Footer() {
             <div className="flex gap-4 mt-8">
               <a
                 href="https://www.facebook.com/chosenre"
-                className="p-3 rounded-lg border border-primary-foreground/20 hover:border-accent hover:text-accent transition-all duration-300"
+                className="p-3 rounded-lg border border-primary-foreground/20 hover:border-gold hover:text-gold transition-all duration-300"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
@@ -68,11 +68,11 @@ export function Footer() {
 
           {/* Properties */}
           <div>
-            <h4 className="text-xs font-sans font-semibold tracking-ultra uppercase text-accent mb-6">Properties</h4>
+            <h4 className="text-xs font-sans font-semibold tracking-ultra uppercase text-gold mb-6">Properties</h4>
             <ul className="space-y-4">
               {footerLinks.properties.map((link) => (
                 <li key={link.name}>
-                  <Link to={link.href} className="text-sm text-primary-foreground/60 hover:text-accent transition-colors">
+                  <Link to={link.href} className="text-sm text-primary-foreground/60 hover:text-gold transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -82,11 +82,11 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-xs font-sans font-semibold tracking-ultra uppercase text-accent mb-6">Services</h4>
+            <h4 className="text-xs font-sans font-semibold tracking-ultra uppercase text-gold mb-6">Services</h4>
             <ul className="space-y-4">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <Link to={link.href} className="text-sm text-primary-foreground/60 hover:text-accent transition-colors">
+                  <Link to={link.href} className="text-sm text-primary-foreground/60 hover:text-gold transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -96,11 +96,11 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-xs font-sans font-semibold tracking-ultra uppercase text-accent mb-6">Company</h4>
+            <h4 className="text-xs font-sans font-semibold tracking-ultra uppercase text-gold mb-6">Company</h4>
             <ul className="space-y-4">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link to={link.href} className="text-sm text-primary-foreground/60 hover:text-accent transition-colors">
+                  <Link to={link.href} className="text-sm text-primary-foreground/60 hover:text-gold transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -108,7 +108,7 @@ export function Footer() {
               <li>
                 <Link
                   to="/faith-community"
-                  className="inline-flex items-center gap-2 text-sm text-accent hover:text-terra-light transition-colors"
+                  className="inline-flex items-center gap-2 text-sm text-gold hover:text-gold-light transition-colors"
                 >
                   <Heart className="w-4 h-4" />
                   Request Prayer

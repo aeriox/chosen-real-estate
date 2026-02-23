@@ -6,7 +6,7 @@ import { Home, Building2 } from "lucide-react";
 import { SearchFiltersBar, SearchFilters } from "@/components/properties/SearchFilters";
 import { ListingsGrid } from "@/components/properties/ListingsGrid";
 import { LeadCaptureModal } from "@/components/properties/LeadCaptureModal";
-import heroImage from "@/assets/hero-home.jpg";
+import heroImage from "@/assets/hero-home-new.jpg";
 
 interface Property {
   id: string;

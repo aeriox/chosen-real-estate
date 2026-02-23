@@ -15,13 +15,13 @@ export const Philosophy = () => {
           >
             <div className="aspect-[4/5] overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2670&auto=format&fit=crop"
-                alt="Luxury office space"
+                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2669&auto=format&fit=crop"
+                alt="Modern office space"
                 className="w-full h-full object-cover"
               />
             </div>
             {/* Decorative frame */}
-            <div className="absolute -bottom-6 -right-6 w-full h-full border border-primary/30 -z-10" />
+            <div className="absolute -bottom-6 -right-6 w-full h-full border border-gold/30 -z-10" />
           </motion.div>
 
           {/* Content */}
@@ -31,14 +31,14 @@ export const Philosophy = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="text-primary tracking-[0.3em] text-xs mb-4 block">
+            <span className="text-gold tracking-[0.3em] text-xs mb-4 block">
               OUR FOUNDATION
             </span>
             
             <h2 className="font-serif text-3xl md:text-5xl text-foreground mb-6 leading-tight">
               Faith. Excellence.
               <br />
-              <span className="italic text-primary">Legacy.</span>
+              <span className="italic text-gold">Legacy.</span>
             </h2>
 
             <p className="text-foreground/70 leading-relaxed mb-8">
@@ -47,7 +47,7 @@ export const Philosophy = () => {
               property search begins with a purpose. Every closing represents a new chapter.
             </p>
 
-            <blockquote className="border-l-2 border-primary pl-6 mb-8">
+            <blockquote className="border-l-2 border-gold pl-6 mb-8">
               <p className="font-serif italic text-xl text-foreground/80">
                 "Called to Serve. Curated for Luxury."
               </p>
@@ -55,7 +55,7 @@ export const Philosophy = () => {
 
             <a
               href="#"
-              className="inline-block text-xs tracking-[0.2em] text-primary border border-primary/50 px-8 py-3 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+              className="inline-block text-xs tracking-[0.2em] text-gold border border-gold/50 px-8 py-3 hover:bg-gold hover:text-accent-foreground transition-all duration-300"
             >
               OUR PHILOSOPHY
             </a>

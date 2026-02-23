@@ -65,7 +65,7 @@ export function Header() {
               src={logoImage}
               alt="Chosen Real Estate Advisors"
               className={cn(
-                "h-20 md:h-28 w-auto transition-all duration-300",
+                "h-28 md:h-36 w-auto transition-all duration-300",
                 scrolled ? "brightness-100" : "brightness-0 invert"
               )}
             />
@@ -91,7 +91,7 @@ export function Header() {
               className={cn(
                 "text-[13px] font-semibold tracking-wide uppercase px-5 py-2.5 rounded-lg transition-all duration-200",
                 scrolled
-                  ? "bg-accent text-accent-foreground hover:bg-terra-dark"
+                  ? "bg-accent text-accent-foreground hover:bg-gold-dark"
                   : "bg-primary-foreground/15 text-primary-foreground border border-primary-foreground/30 hover:bg-primary-foreground/25"
               )}
             >
@@ -121,7 +121,7 @@ export function Header() {
       >
         <div className="container-custom flex justify-between items-center py-4">
           <Link to="/" onClick={() => setMobileMenuOpen(false)}>
-            <img src={logoImage} alt="Chosen" className="h-10 w-auto" />
+            <img src={logoImage} alt="Chosen" className="h-16 w-auto" />
           </Link>
           <button
             onClick={() => setMobileMenuOpen(false)}

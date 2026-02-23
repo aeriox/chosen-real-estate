@@ -5,7 +5,7 @@ import {
   Briefcase, Users, DollarSign, FileSignature, 
   Search, Shield, ArrowRight, CheckCircle, Lock
 } from "lucide-react";
-import businessImage from "@/assets/business-acquisitions.jpg";
+import businessImage from "@/assets/business-acquisitions-new.jpg";
 
 const services = [
   {
