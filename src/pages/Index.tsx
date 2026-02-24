@@ -4,7 +4,7 @@ import { Search, ArrowRight, ChevronDown } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
-import founderPhoto from "@/assets/founder-photo-new.jpg";
+import founderPhoto from "@/assets/founder-photo-new.png";
 import heroImage from "@/assets/hero-living-room-new.jpg";
 
 const heroImages = {
