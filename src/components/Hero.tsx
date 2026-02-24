@@ -21,7 +21,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="inline-block text-gold tracking-[0.3em] text-xs md:text-sm mb-6"
+          className="inline-block text-foreground tracking-[0.3em] text-xs md:text-sm mb-6 font-semibold"
         >
           PALM BEACH & ORLANDO
         </motion.span>
