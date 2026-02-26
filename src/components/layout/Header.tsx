@@ -65,7 +65,7 @@ export function Header() {
               src={logoImage}
               alt="Chosen Real Estate Advisors"
               className={cn(
-                "h-44 md:h-52 w-auto transition-all duration-300",
+                "h-48 md:h-56 w-auto transition-all duration-300",
                 scrolled ? "brightness-100" : "brightness-0 invert"
               )}
             />
