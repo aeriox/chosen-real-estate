@@ -61,7 +61,7 @@ export function Header() {
         {/* Main nav */}
         <nav className="container-custom flex items-start justify-between pt-3 relative">
           {/* Logo - larger, positioned independently */}
-          <Link to="/" className="flex items-center -mt-10">
+          <Link to="/" className="flex items-center -mt-16">
             <img
               src={logoImage}
               alt="Chosen Real Estate Advisors"
