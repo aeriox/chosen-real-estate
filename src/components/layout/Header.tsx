@@ -59,7 +59,7 @@ export function Header() {
         </div>
 
         {/* Main nav */}
-        <nav className="container-custom flex items-center justify-between py-1 relative">
+        <nav className="container-custom flex items-center justify-between -mt-1 relative">
           {/* Logo - larger, positioned independently */}
           <Link to="/" className="flex items-center">
             <img
