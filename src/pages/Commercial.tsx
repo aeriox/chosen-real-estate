@@ -26,7 +26,7 @@ const services = [
     description: "We prepare Letters of Intent and Memoranda of Understanding that protect your position and set deals up for success.",
   },
   {
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?q=80&w=800&auto=format&fit=crop",
     title: "Off-Market Sourcing",
     description: "Many of the best deals never hit the market. We actively source opportunities through relationships and direct outreach.",
   },
