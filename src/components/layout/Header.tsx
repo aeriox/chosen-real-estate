@@ -58,20 +58,22 @@ export function Header() {
           </div>
         </div>
 
-        {/* Main nav */}
-        <nav className="container-custom flex items-center justify-between py-4">
-          <Link to="/" className="flex items-center gap-3">
+        {/* Logo - positioned independently */}
+        <div className="container-custom flex justify-start py-2">
+          <Link to="/" className="flex items-center">
             <img
               src={logoImage}
               alt="Chosen Real Estate Advisors"
               className={cn(
-                "h-12 md:h-14 w-auto transition-all duration-300",
-                scrolled ? "brightness-100" : "brightness-0 invert"
+                "h-20 md:h-28 w-auto transition-all duration-300",
+                scrolled ? "h-12 md:h-14 brightness-100" : "brightness-0 invert"
               )}
             />
           </Link>
+        </div>
 
-          {/* Desktop nav */}
+        {/* Main nav */}
+        <nav className="container-custom flex items-center justify-between py-2">
           <div className="hidden lg:flex items-center gap-8">
             {navigation.map((item) => (
               <Link
