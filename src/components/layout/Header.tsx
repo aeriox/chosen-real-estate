@@ -59,7 +59,7 @@ export function Header() {
         </div>
 
         {/* Main nav */}
-        <nav className="container-custom flex items-center justify-between py-4 relative">
+        <nav className="container-custom flex items-center justify-between py-1 relative">
           {/* Logo - larger, positioned independently */}
           <Link to="/" className="flex items-center">
             <img
@@ -67,7 +67,7 @@ export function Header() {
               alt="Chosen Real Estate Advisors"
               className={cn(
                 "w-auto transition-all duration-300",
-                scrolled ? "h-12 md:h-14 brightness-100" : "h-20 md:h-28 brightness-0 invert"
+                scrolled ? "h-12 md:h-14 brightness-100" : "h-24 md:h-36 brightness-0 invert"
               )}
             />
           </Link>
