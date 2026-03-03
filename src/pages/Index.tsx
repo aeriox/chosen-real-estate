@@ -6,6 +6,7 @@ import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import founderPhoto from "@/assets/founder-photo-new.png";
 import heroImage from "@/assets/hero-living-room-new.jpg";
+import foundationBg from "@/assets/foundation-bg.jpg";
 
 const heroImages = {
   residential: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2670&auto=format&fit=crop",
@@ -223,8 +224,12 @@ const Index = () => {
       </section>
 
       {/* ── Philosophy / Faith ── */}
-      <section className="section-padding bg-background">
-        <div className="container-custom">
+      <section className="section-padding relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={foundationBg} alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-navy-dark/75" />
+        <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden">
               <img
@@ -238,17 +243,17 @@ const Index = () => {
               <span className="text-xs font-sans font-semibold tracking-ultra uppercase text-gold mb-4 block">
                 Our Foundation
               </span>
-              <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-6 leading-tight">
+              <h2 className="font-serif text-4xl md:text-5xl text-cream mb-6 leading-tight">
                 Faith. Excellence.
                 <br />
                 <span className="italic text-gold">Legacy.</span>
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              <p className="text-cream/70 text-lg leading-relaxed mb-8">
                 At Chosen Real Estate Advisors, we believe real estate is more than transactions—it's legacy,
                 stewardship, and marketplace ministry. Every property search begins with a purpose.
                 Every closing represents a new chapter.
               </p>
-              <div className="editorial-divider mb-8" />
+              <div className="w-16 h-px bg-gold/40 mb-8" />
               <Link
                 to="/about"
                 className="inline-flex items-center gap-3 text-sm font-medium text-gold hover:text-gold-dark transition-colors"
