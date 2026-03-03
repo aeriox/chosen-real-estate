@@ -1,50 +1,47 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import { 
-  Building2, Users, TrendingUp, FileText, Lock, 
-  HardHat, MapPin, RefreshCw, ArrowRight, CheckCircle 
-} from "lucide-react";
+import { Lock, ArrowRight, CheckCircle } from "lucide-react";
 import commercialHero from "@/assets/commercial-hero-new.jpg";
 
 const services = [
   {
-    icon: Users,
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
     title: "Tenant Representation",
     description: "We advocate for businesses seeking retail, office, or industrial space. From site selection to lease negotiation, we protect your interests.",
   },
   {
-    icon: Building2,
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800&auto=format&fit=crop",
     title: "Buyer Representation",
     description: "Acquiring commercial property requires strategy. We guide investors and owner-users through identification, due diligence, and closing.",
   },
   {
-    icon: TrendingUp,
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
     title: "Investment Advisory",
     description: "Access our network for multifamily, retail, and mixed-use investment opportunities. We help structure deals that align with your goals.",
   },
   {
-    icon: FileText,
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop",
     title: "LOI & MOU Structuring",
     description: "We prepare Letters of Intent and Memoranda of Understanding that protect your position and set deals up for success.",
   },
   {
-    icon: Lock,
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?q=80&w=800&auto=format&fit=crop",
     title: "Off-Market Sourcing",
     description: "Many of the best deals never hit the market. We actively source opportunities through relationships and direct outreach.",
   },
   {
-    icon: HardHat,
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop",
     title: "Development Support",
     description: "From site feasibility to entitlement navigation to investor presentations, we support developers at every stage.",
   },
   {
-    icon: MapPin,
+    image: "https://images.unsplash.com/photo-1524813686514-a57563d77965?q=80&w=800&auto=format&fit=crop",
     title: "Zoning & Land Use",
     description: "Understanding what you can build is half the battle. We help navigate zoning, variances, and land use considerations.",
   },
   {
-    icon: RefreshCw,
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop",
     title: "1031 Exchange",
     description: "Preserve your capital gains with a properly structured exchange. We coordinate with qualified intermediaries.",
   },
@@ -123,16 +120,23 @@ const Commercial = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <div
                 key={service.title}
-                className="bg-card rounded-xl p-6 card-hover border border-border group"
+                className="bg-card rounded-xl overflow-hidden card-hover border border-border group"
               >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-gold/20 to-gold/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <service.icon className="w-6 h-6 text-gold" />
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                  />
                 </div>
-                <h3 className="font-serif text-xl font-bold text-navy mb-3">{service.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
+                <div className="p-6">
+                  <h3 className="font-serif text-lg font-bold text-navy mb-3">{service.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
+                </div>
               </div>
             ))}
           </div>

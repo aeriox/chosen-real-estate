@@ -2,39 +2,38 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import { 
-  Briefcase, Users, DollarSign, FileSignature, 
-  Search, Shield, ArrowRight, CheckCircle, Lock
+  Briefcase, ArrowRight, CheckCircle, Lock
 } from "lucide-react";
 import businessImage from "@/assets/business-acquisitions-new.jpg";
 
 const services = [
   {
-    icon: Search,
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",
     title: "Acquisition Advisory",
     description: "We guide buyers through the entire acquisition process—from target identification to due diligence to closing.",
   },
   {
-    icon: Users,
+    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=800&auto=format&fit=crop",
     title: "Partnership & Equity Structuring",
     description: "Not every deal is a solo play. We help structure partnerships, joint ventures, and equity arrangements.",
   },
   {
-    icon: DollarSign,
+    image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=800&auto=format&fit=crop",
     title: "Access to Capital",
     description: "Our network includes SBA lenders, private lenders, and investors. We make introductions that get deals funded.",
   },
   {
-    icon: FileSignature,
+    image: "https://images.unsplash.com/photo-1553028826-f4804a6dba3b?q=80&w=800&auto=format&fit=crop",
     title: "Creative Deal Architecture",
     description: "Seller financing, earnouts, equity rollovers—we help structure deals that work for both parties.",
   },
   {
-    icon: Shield,
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop",
     title: "Due Diligence Coordination",
     description: "We coordinate with attorneys, CPAs, and industry experts to ensure thorough due diligence.",
   },
   {
-    icon: Lock,
+    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop",
     title: "Confidential Introductions",
     description: "Many business sales are private. We facilitate NDA-protected introductions between qualified buyers and sellers.",
   },
@@ -125,13 +124,20 @@ const BusinessAcquisitions = () => {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="bg-card rounded-xl p-8 card-hover border border-border group"
+                className="bg-card rounded-xl overflow-hidden card-hover border border-border group"
               >
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-gold/20 to-gold/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <service.icon className="w-7 h-7 text-gold" />
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                  />
                 </div>
-                <h3 className="font-serif text-xl font-bold text-navy mb-3">{service.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                <div className="p-8">
+                  <h3 className="font-serif text-xl font-bold text-navy mb-3">{service.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                </div>
               </div>
             ))}
           </div>

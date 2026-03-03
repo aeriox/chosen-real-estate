@@ -2,16 +2,31 @@ import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { 
-  Lock, Eye, Bell, Users, 
-  CheckCircle, ArrowRight, Building2, Briefcase, Home, MapPin
+  Lock, ArrowRight, CheckCircle, Building2, Briefcase, Home, MapPin
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const benefits = [
-  { icon: Eye, title: "Early Access", description: "See properties before they hit the market" },
-  { icon: Lock, title: "Confidential Deals", description: "Private business acquisition opportunities" },
-  { icon: Users, title: "Direct Introductions", description: "Connect directly with motivated sellers" },
-  { icon: Bell, title: "Priority Alerts", description: "First notification of new opportunities" },
+  {
+    image: "https://images.unsplash.com/photo-1558036117-15d82a90b9b1?q=80&w=800&auto=format&fit=crop",
+    title: "Early Access",
+    description: "See properties before they hit the market",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
+    title: "Confidential Deals",
+    description: "Private business acquisition opportunities",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop",
+    title: "Direct Introductions",
+    description: "Connect directly with motivated sellers",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop",
+    title: "Priority Alerts",
+    description: "First notification of new opportunities",
+  },
 ];
 
 const interestOptions = [
@@ -126,13 +141,20 @@ const OffMarketAccess = () => {
             {benefits.map((benefit) => (
               <div
                 key={benefit.title}
-                className="bg-card rounded-xl p-6 text-center border border-border card-hover"
+                className="bg-card rounded-xl overflow-hidden text-center border border-border card-hover group"
               >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-gold/20 to-gold/10 flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-6 h-6 text-gold" />
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img
+                    src={benefit.image}
+                    alt={benefit.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                  />
                 </div>
-                <h3 className="font-semibold text-navy mb-2">{benefit.title}</h3>
-                <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                <div className="p-6">
+                  <h3 className="font-semibold text-navy mb-2">{benefit.title}</h3>
+                  <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                </div>
               </div>
             ))}
           </div>

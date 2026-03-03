@@ -1,40 +1,37 @@
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { 
-  Heart, GraduationCap, Users, Handshake, 
-  TrendingUp, Building2, Star, ArrowRight, Upload
-} from "lucide-react";
+import { Star, ArrowRight, Upload } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const culturePoints = [
   {
-    icon: Heart,
+    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800&auto=format&fit=crop",
     title: "Faith-Driven Culture",
     description: "We pray together, grow together, and win together. Faith isn't an add-on—it's who we are.",
   },
   {
-    icon: Building2,
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
     title: "Commercial Training",
     description: "Most residential agents never get commercial training. At Chosen, you will.",
   },
   {
-    icon: GraduationCap,
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800&auto=format&fit=crop",
     title: "Mentorship & Support",
     description: "Learn from experienced brokers and entrepreneurs who want to see you succeed.",
   },
   {
-    icon: Users,
+    image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=800&auto=format&fit=crop",
     title: "Network Access",
     description: "Tap into our network of attorneys, lenders, title companies, and private investors.",
   },
   {
-    icon: Handshake,
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
     title: "Collaboration Over Competition",
     description: "We believe in abundance. Your success doesn't threaten anyone here—it's celebrated.",
   },
   {
-    icon: TrendingUp,
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop",
     title: "Flexible Partnership Models",
     description: "We offer creative compensation and partnership structures for entrepreneurial agents.",
   },
@@ -131,13 +128,20 @@ const Careers = () => {
             {culturePoints.map((point) => (
               <div
                 key={point.title}
-                className="bg-card rounded-xl p-8 border border-border card-hover"
+                className="bg-card rounded-xl overflow-hidden border border-border card-hover group"
               >
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-gold/20 to-gold/10 flex items-center justify-center mb-6">
-                  <point.icon className="w-7 h-7 text-gold" />
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img
+                    src={point.image}
+                    alt={point.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                  />
                 </div>
-                <h3 className="font-serif text-xl font-bold text-navy mb-3">{point.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{point.description}</p>
+                <div className="p-8">
+                  <h3 className="font-serif text-xl font-bold text-navy mb-3">{point.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{point.description}</p>
+                </div>
               </div>
             ))}
           </div>
