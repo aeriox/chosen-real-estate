@@ -2,25 +2,25 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { 
-  Home, Building2, Briefcase, Lock, 
-  Users, FileText, RefreshCw, Heart, ArrowRight
+  Heart, ArrowRight, Lock, FileText, Building2, 
+  Briefcase, RefreshCw, Users
 } from "lucide-react";
 
 const representationServices = [
   {
-    icon: Home,
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
     title: "Residential Buyer Representation",
     description: "We guide home buyers through every step—from search to close—with expertise and a personal touch.",
     link: "/residential-buyers",
   },
   {
-    icon: Building2,
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
     title: "Commercial Tenant & Buyer Representation",
     description: "Whether you're leasing space or acquiring property, we protect your interests and negotiate on your behalf.",
     link: "/commercial",
   },
   {
-    icon: Briefcase,
+    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop",
     title: "Business Acquisition Advisory",
     description: "We help entrepreneurs and investors identify, structure, and close business acquisitions.",
     link: "/business-acquisitions",
@@ -69,20 +69,27 @@ const Services = () => {
             {representationServices.map((service) => (
               <div
                 key={service.title}
-                className="bg-card rounded-2xl p-8 card-hover border border-border group"
+                className="bg-card rounded-2xl overflow-hidden card-hover border border-border group"
               >
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-gold/20 to-gold/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <service.icon className="w-8 h-8 text-gold" />
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                  />
                 </div>
-                <h3 className="font-serif text-xl font-bold text-navy mb-3">{service.title}</h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
-                <Link
-                  to={service.link}
-                  className="inline-flex items-center gap-2 text-gold font-medium hover:gap-3 transition-all"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                <div className="p-8">
+                  <h3 className="font-serif text-xl font-bold text-navy mb-3">{service.title}</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
+                  <Link
+                    to={service.link}
+                    className="inline-flex items-center gap-2 text-gold font-medium hover:gap-3 transition-all"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
               </div>
             ))}
           </div>

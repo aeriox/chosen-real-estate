@@ -2,16 +2,35 @@ import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { 
-  Star, MapPin, Users, Heart, 
-  ArrowRight, CheckCircle, Building2, Briefcase
+  MapPin, ArrowRight, CheckCircle, Briefcase
 } from "lucide-react";
 
 const values = [
-  { icon: Heart, title: "Faith", description: "God is the foundation of everything we do. We begin with prayer and end with gratitude." },
-  { icon: Star, title: "Excellence", description: "We bring our best to every transaction. Good enough isn't good enough." },
-  { icon: CheckCircle, title: "Integrity", description: "Our word is our bond. We do what we say and say what we mean." },
-  { icon: Users, title: "Service", description: "Clients come first. Always. We exist to serve, not to be served." },
-  { icon: Building2, title: "Legacy", description: "We're building something that lasts—for our clients and our community." },
+  {
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
+    title: "Faith",
+    description: "God is the foundation of everything we do. We begin with prayer and end with gratitude.",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800&auto=format&fit=crop",
+    title: "Excellence",
+    description: "We bring our best to every transaction. Good enough isn't good enough.",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=800&auto=format&fit=crop",
+    title: "Integrity",
+    description: "Our word is our bond. We do what we say and say what we mean.",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=800&auto=format&fit=crop",
+    title: "Service",
+    description: "Clients come first. Always. We exist to serve, not to be served.",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800&auto=format&fit=crop",
+    title: "Legacy",
+    description: "We're building something that lasts—for our clients and our community.",
+  },
 ];
 
 const markets = [
@@ -107,13 +126,20 @@ const About = () => {
             {values.map((value) => (
               <div
                 key={value.title}
-                className="bg-card rounded-xl p-8 card-hover border border-border"
+                className="bg-card rounded-xl overflow-hidden card-hover border border-border group"
               >
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-gold/20 to-gold/10 flex items-center justify-center mb-6">
-                  <value.icon className="w-7 h-7 text-gold" />
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img
+                    src={value.image}
+                    alt={value.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                  />
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-navy mb-3">{value.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+                <div className="p-8">
+                  <h3 className="font-serif text-2xl font-bold text-navy mb-3">{value.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+                </div>
               </div>
             ))}
           </div>
