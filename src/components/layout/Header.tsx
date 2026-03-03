@@ -67,7 +67,7 @@ export function Header() {
               alt="Chosen Real Estate Advisors"
               className={cn(
                 "w-auto transition-all duration-300",
-                scrolled ? "h-12 md:h-14 brightness-100" : "h-24 md:h-36 brightness-0 invert"
+                scrolled ? "h-12 md:h-14 brightness-100" : "h-32 md:h-48 brightness-0 invert"
               )}
             />
           </Link>
