@@ -66,7 +66,7 @@ const Index = () => {
   return (
     <Layout>
       {/* ── Hero ── */}
-      <section className="relative min-h-screen flex items-end lg:items-end max-lg:items-center overflow-hidden">
+      <section className="relative min-h-screen flex flex-col overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroImage} alt="Luxury living room" className="w-full h-full object-cover" />
         </div>
@@ -74,12 +74,13 @@ const Index = () => {
 
         <div
           className={cn(
-            "relative z-10 container-custom pb-20 md:pb-28 pt-40 max-lg:pb-10 max-lg:pt-32 transition-all duration-1000",
+            "relative z-10 container-custom flex-1 flex flex-col transition-all duration-1000",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           )}
         >
-          <div className="max-w-3xl">
-            <span className="inline-block text-[11px] font-sans font-semibold tracking-ultra uppercase text-gold mb-6">
+          {/* Text block — centered on mobile/tablet, bottom-aligned on desktop */}
+          <div className="max-w-3xl max-lg:mx-auto max-lg:text-center flex-1 flex flex-col max-lg:justify-center max-lg:-mt-16 lg:justify-end lg:pb-6 pt-40">
+            <span className="inline-block text-[11px] font-sans font-semibold tracking-ultra uppercase text-foreground lg:text-gold mb-6">
               Palm Beach & Orlando
             </span>
 
@@ -92,12 +93,33 @@ const Index = () => {
               Called to Serve.
             </p>
 
-            <p className="text-cream/70 text-lg md:text-xl max-w-lg mb-10">
+            <p className="text-cream/70 text-lg md:text-xl max-w-lg max-lg:mx-auto mb-0 lg:mb-10">
               Faith-driven integrity. World-class expertise.
             </p>
 
-            {/* Search */}
-            <form onSubmit={handleSearch} className="max-w-lg">
+            {/* Search — desktop only inline */}
+            <form onSubmit={handleSearch} className="max-w-lg hidden lg:block">
+              <div className="flex bg-cream/10 backdrop-blur-sm border border-cream/20 rounded-xl overflow-hidden">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search by City, Lifestyle, or Zip..."
+                  className="flex-1 bg-transparent px-5 py-4 text-cream placeholder:text-cream/50 focus:outline-none"
+                />
+                <button
+                  type="submit"
+                  className="px-5 bg-gold text-accent-foreground hover:bg-gold-dark transition-colors"
+                >
+                  <Search className="w-5 h-5" />
+                </button>
+              </div>
+            </form>
+          </div>
+
+          {/* Search — mobile/tablet at bottom */}
+          <div className="lg:hidden pb-20 pt-8 max-w-lg max-lg:mx-auto max-lg:w-full">
+            <form onSubmit={handleSearch}>
               <div className="flex bg-cream/10 backdrop-blur-sm border border-cream/20 rounded-xl overflow-hidden">
                 <input
                   type="text"
