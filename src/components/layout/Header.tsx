@@ -65,7 +65,8 @@ export function Header() {
           scrolled ? "h-32 md:h-36" : "h-32 md:h-36"
         )}>
           {/* Logo */}
-          <Link to="/" className="relative flex items-center h-full" style={{ marginLeft: '-8.8125rem' }}>
+          <Link to="/" className="relative flex items-center h-full lg:ml-[-8.8125rem] max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2">
+
             {/* White logo - visible at top */}
             <img
               src={logoImage}
