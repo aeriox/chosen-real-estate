@@ -224,7 +224,7 @@ const Index = () => {
       </section>
 
       {/* ── Philosophy / Faith ── */}
-      <section className="section-padding relative overflow-hidden">
+      <section className="pt-20 md:pt-28 lg:pt-36 pb-0 relative overflow-hidden">
         <div className="absolute inset-0">
           <img src={foundationBg} alt="" className="w-full h-full object-cover" />
         </div>
