@@ -66,7 +66,7 @@ const Index = () => {
   return (
     <Layout>
       {/* ── Hero ── */}
-      <section className="relative min-h-screen flex items-end overflow-hidden">
+      <section className="relative min-h-screen flex items-end lg:items-end max-lg:items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroImage} alt="Luxury living room" className="w-full h-full object-cover" />
         </div>
@@ -74,7 +74,7 @@ const Index = () => {
 
         <div
           className={cn(
-            "relative z-10 container-custom pb-20 md:pb-28 pt-40 transition-all duration-1000",
+            "relative z-10 container-custom pb-20 md:pb-28 pt-40 max-lg:pb-10 max-lg:pt-32 transition-all duration-1000",
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           )}
         >
