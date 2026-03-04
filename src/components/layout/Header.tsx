@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { X, Phone, Mail, Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import logoImage from "@/assets/chosen-logo.png";
+import logoBlue from "@/assets/chosen-logo-blue.png";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -59,15 +60,28 @@ export function Header() {
         </div>
 
         {/* Main nav */}
-        <nav className="container-custom flex items-start justify-between pt-3 relative">
-          {/* Logo - larger, positioned independently */}
-          <Link to="/" className="flex items-center -mt-[77px]">
+        <nav className={cn(
+          "container-custom flex items-center justify-between transition-all duration-300",
+          scrolled ? "h-16 md:h-20" : "h-16 md:h-20"
+        )}>
+          {/* Logo */}
+          <Link to="/" className="relative flex items-center h-full">
+            {/* White logo - visible at top */}
             <img
               src={logoImage}
               alt="Chosen Real Estate Advisors"
               className={cn(
-                "w-auto transition-all duration-300",
-                scrolled ? "h-12 md:h-14 brightness-100" : "h-32 md:h-48 brightness-0 invert"
+                "w-auto transition-all duration-500 absolute",
+                scrolled ? "h-10 md:h-12 opacity-0" : "h-10 md:h-12 brightness-0 invert opacity-100"
+              )}
+            />
+            {/* Blue logo - visible when scrolled */}
+            <img
+              src={logoBlue}
+              alt="Chosen Real Estate Advisors"
+              className={cn(
+                "w-auto transition-all duration-500",
+                scrolled ? "h-10 md:h-12 opacity-100" : "h-10 md:h-12 opacity-0"
               )}
             />
           </Link>
