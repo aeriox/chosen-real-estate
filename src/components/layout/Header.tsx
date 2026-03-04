@@ -72,7 +72,7 @@ export function Header() {
               src={logoImage}
               alt="Chosen Real Estate Advisors"
               className={cn(
-                "w-auto transition-all duration-500 absolute",
+                "w-auto max-w-none shrink-0 transition-all duration-500 absolute",
                 scrolled ? "h-60 opacity-0" : "h-60 brightness-0 invert opacity-100"
               )}
             />
@@ -81,7 +81,7 @@ export function Header() {
               src={logoBlue}
               alt="Chosen Real Estate Advisors"
               className={cn(
-                "w-auto transition-all duration-500",
+                "w-auto max-w-none shrink-0 transition-all duration-500",
                 scrolled ? "h-60 opacity-100" : "h-60 opacity-0"
               )}
             />
