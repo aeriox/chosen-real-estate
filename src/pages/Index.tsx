@@ -79,7 +79,7 @@ const Index = () => {
           )}
         >
           {/* Text block — centered on mobile/tablet, bottom-aligned on desktop */}
-          <div className="max-w-3xl max-lg:mx-auto max-lg:text-center flex-1 flex flex-col max-lg:justify-center max-lg:-mt-44 lg:justify-end lg:pb-6 pt-40">
+          <div className="max-w-3xl max-lg:mx-auto max-lg:text-center flex-1 flex flex-col max-lg:justify-center max-lg:-mt-[186px] lg:justify-end lg:pb-6 pt-40">
             <span className="inline-block text-[11px] font-sans font-semibold tracking-ultra uppercase text-foreground lg:text-gold mb-6">
               Palm Beach & Orlando
             </span>
