@@ -16,7 +16,7 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container text-center px-4 pt-32 md:pt-40">
+      <div className="relative z-10 container text-center px-4 pt-16 md:pt-20 lg:pt-40">
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
