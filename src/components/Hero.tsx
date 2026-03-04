@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-living-room-new.jpg";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-start lg:items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -16,7 +16,7 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container text-center px-4 pt-16 md:pt-20 lg:pt-40">
+      <div className="relative z-10 container text-center px-4 -mt-16 md:-mt-20 lg:mt-0 lg:pt-40">
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
