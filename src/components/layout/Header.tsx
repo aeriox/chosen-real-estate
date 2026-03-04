@@ -62,7 +62,7 @@ export function Header() {
         {/* Main nav */}
         <nav className={cn(
           "container-custom flex items-center justify-between transition-all duration-300",
-          scrolled ? "h-16 md:h-20" : "h-16 md:h-20"
+          scrolled ? "h-20 md:h-24" : "h-20 md:h-24"
         )}>
           {/* Logo */}
           <Link to="/" className="relative flex items-center h-full">
@@ -72,7 +72,7 @@ export function Header() {
               alt="Chosen Real Estate Advisors"
               className={cn(
                 "w-auto transition-all duration-500 absolute",
-                scrolled ? "h-14 md:h-16 opacity-0" : "h-14 md:h-16 brightness-0 invert opacity-100"
+                scrolled ? "h-24 md:h-32 opacity-0" : "h-24 md:h-32 brightness-0 invert opacity-100"
               )}
             />
             {/* Blue logo - visible when scrolled */}
@@ -81,7 +81,7 @@ export function Header() {
               alt="Chosen Real Estate Advisors"
               className={cn(
                 "w-auto transition-all duration-500",
-                scrolled ? "h-14 md:h-16 opacity-100" : "h-14 md:h-16 opacity-0"
+                scrolled ? "h-24 md:h-32 opacity-100" : "h-24 md:h-32 opacity-0"
               )}
             />
           </Link>
