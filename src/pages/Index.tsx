@@ -93,7 +93,7 @@ const Index = () => {
               Called to Serve.
             </p>
 
-            <p className="text-cream/70 text-lg md:text-xl max-w-lg max-lg:mx-auto mb-0 lg:mb-10">
+            <p className="text-cream/70 text-lg md:text-xl max-w-lg max-lg:mx-auto max-lg:mt-[20px] mb-0 lg:mb-10">
               Faith-driven integrity. World-class expertise.
             </p>
 
