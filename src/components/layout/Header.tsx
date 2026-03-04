@@ -73,7 +73,7 @@ export function Header() {
               alt="Chosen Real Estate Advisors"
               className={cn(
                 "w-auto transition-all duration-500 absolute",
-                scrolled ? "h-40 md:h-60 opacity-0" : "h-40 md:h-60 brightness-0 invert opacity-100"
+                scrolled ? "h-60 opacity-0" : "h-60 brightness-0 invert opacity-100"
               )}
             />
             {/* Blue logo - visible when scrolled */}
@@ -82,7 +82,7 @@ export function Header() {
               alt="Chosen Real Estate Advisors"
               className={cn(
                 "w-auto transition-all duration-500",
-                scrolled ? "h-40 md:h-60 opacity-100" : "h-40 md:h-60 opacity-0"
+                scrolled ? "h-60 opacity-100" : "h-60 opacity-0"
               )}
             />
           </Link>
